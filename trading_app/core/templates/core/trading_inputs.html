@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trading Inputs</title>
+    <link rel="stylesheet">
+</head>
+<body>
+    <h1>Trading Inputs</h1>
+    <form id="myForm" method="post">
+        {% csrf_token %}
+        <label for="start_date">Start Date:</label>
+        <input type="date" id="start_date" name="start_date" required>
+        <br><br>
+        <label for="end_date">End Date:</label>
+        <input type="date" id="end_date" name="end_date" required>
+        <br><br>
+        <!-- <input type="text" id="result" name="result"> -->
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+    <script src="{% static 'core/js/api.js' %}"></script>
+</body>
+</html>
